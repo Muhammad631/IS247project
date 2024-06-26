@@ -1,5 +1,4 @@
 package Model;
-
 import java.util.Date;
 
 public class Order {
@@ -15,7 +14,6 @@ public class Order {
         this.orderDate = orderDate;
     }
 
-    // Getters and Setters
     public int getOrderID() {
         return orderID;
     }

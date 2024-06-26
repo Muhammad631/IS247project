@@ -1,5 +1,4 @@
 package Model;
-
 public abstract class Person {
     private String name;
 
@@ -7,7 +6,6 @@ public abstract class Person {
         this.name = name;
     }
 
-    // Getter and Setter
     public String getName() {
         return name;
     }
