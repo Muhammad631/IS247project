@@ -1,52 +1,45 @@
 package Model;
+
+
+// User class that extends the Person class
 public class User extends Person {
+    // Fields for username and password
     private String username;
     private String password;
-    private boolean loggedIn;
 
+
+    // Constructor to initialize User with name, username, and password
     public User(String name, String username, String password) {
-        super(name);
+        super(name); // Use of super keyword to call the parent class constructor
         this.username = username;
         this.password = password;
-        this.loggedIn = false;
     }
 
-    // Method to authenticate user login
-    public boolean login(String username, String password) {
-        if (this.username.equals(username) && this.password.equals(password)) {
-            this.loggedIn = true;
-            System.out.println("Login successful.");
-            return true;
-        } else {
-            System.out.println("Login failed. Invalid username or password.");
-            return false;
-        }
+
+    // Getters and Setters for the fields
+    public String getUsername() {
+        return username;
     }
 
-    // Method to logout user
-    public void logout() {
-        if (loggedIn) {
-            this.loggedIn = false;
-            System.out.println("Logout successful.");
-        } else {
-            System.out.println("No user logged in.");
-        }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    // Method to check if user is logged in
-    public boolean isLoggedIn() {
-        return loggedIn;
+
+    public String getPassword() {
+        return password;
     }
 
-    // Method to display user information
-    public void displayUserInfo() {
-        System.out.println("User Information:");
-        System.out.println("Name: " + getName());
-        System.out.println("Username: " + username);
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
+
+    // Override toString method to provide a string representation of the User
     @Override
     public String toString() {
-        return "User [Name=" + getName() + ", Username=" + username + "]";
+        return "User [Name=" + super.getName() + ", Username=" + username + "]"; // Use of super keyword to call parent class method
     }
 }
